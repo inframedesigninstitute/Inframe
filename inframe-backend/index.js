@@ -47,9 +47,10 @@ connectDB().then(async () => {
             admin_userPassword: hashedPassword
         })
     }
-    app.listen(process.env.PORT, () => {
-        console.log(process.env.PORT)
+    app.listen(process.env.PORT, '0.0.0.0', () => {
+        console.log(`✅ Server running on port ${process.env.PORT}`)
     })
+
 })
 
 
