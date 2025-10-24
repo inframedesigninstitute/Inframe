@@ -32,6 +32,11 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
 }));
 
+app.get('/', (req, res) => {
+    res.send('Inframe Design Institute Backend is running')
+})
+
+
 
 
 app.use('/web', websiteRoute)
