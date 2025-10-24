@@ -10,6 +10,10 @@ const { adminRoute } = require('./routes/admin/adminRoutes')
 const app = express()
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send('Inframe Design Institute Backend is running')
+})
+
 
 const allowedOrigins = [
     'https://www.inframedesigninstitute.com',
@@ -32,9 +36,7 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
 }));
 
-app.get('/', (req, res) => {
-    res.send('Inframe Design Institute Backend is running')
-})
+
 
 
 
