@@ -24,6 +24,8 @@ const allowedOrigins = [
     // 'http://72.60.206.137:9200'
 ];
 
+
+
 app.use(cors({
     origin: (origin, callback) => {
         if (!origin) return callback(null, true); // Postman ya server side requests
